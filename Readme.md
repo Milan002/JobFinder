@@ -56,6 +56,8 @@ cd JobFinder
 
   ![Job Detail Screen](MobileAppScreenShots/ViewDetailsPage.jpg)
 
+## Video Presentation
+You can watch live application here: [Job Search Application](https://drive.google.com/file/d/129NROcij9H1hh8nuoJL0vZe27rqUFXow/view?usp=sharing)
 
 ## Technical Requirements
 
