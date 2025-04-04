@@ -1,105 +1,82 @@
-
 ---
 
-# Job Searching App
+# JobFinder
 
-A React Native application for browsing job listings, bookmarking jobs, and viewing saved bookmarks.
+A React Native application that helps professionals discover and track job opportunities with ease.
 
 ## Features
 
-- **Job Listings**: Browse through available job listings with details.
-- **Bookmark Jobs**: Bookmark job listings to view later.
-- **View Bookmarks**: Access and view all bookmarked jobs.
-- **Offline Storage**: Bookmarks are saved locally for offline access.
+- **Smart Job Search**: Advanced filtering and search capabilities
+- **Job Bookmarking**: Save interesting positions for later review
+- **Detailed Views**: Comprehensive job information at your fingertips
+- **Offline Access**: View saved jobs without internet connection
 
 ## Project Structure
 
 ```
-joblistingapp/
+jobfinder/
 ├── api/
 │   └── api.js                # API functions for fetching jobs
 ├── screens/
-│   ├── BookmarksScreen.js    # Screen displaying bookmarked jobs
+│   ├── BookmarksScreen.js    # Screen displaying saved jobs
 │   ├── JobDetailScreen.js    # Screen displaying details of a single job
 │   └── JobsScreen.js         # Main screen displaying job listings
 ├── components/
-│   ├── BookmarkManager.js    # Functions for managing bookmarks (save, remove, get)
+│   ├── BookmarkManager.js    # Functions for managing saves (save, remove, get)
 │   └── AppNavigator.js       # App navigation setup
 ├── App.js                    # Main entry point of the app
 ├── package.json              # Project metadata and dependencies
 └── README.md                 # Project documentation
 ```
-## React Native Installation
-```java
+
+## Installation
+```bash
 npm install -g expo-cli
-expo init JobApp or npx create-expo-app jobsearch --template blank
-cd JobApp
+expo init JobFinder
+cd JobFinder
 ```
 
 ## Mobile Application Screens
 
-### Screen 1: Job Lists Screen
+### Screen 1: Job Discovery Screen
 
-- **Description**: Displays a list of job postings with options to bookmark and view details.
+- **Description**: Browse through available positions with easy-to-use search and filter options.
 
   ![Job Lists Screen](MobileAppScreenShots/JobListPage.jpg)
 
-### Screen 2: Bookmarked Jobs Screen
+### Screen 2: Saved Jobs Screen
 
-- **Description**: Displays a list of bookmarked jobs retrieved from local storage.
+- **Description**: Access your curated collection of saved opportunities.
 
   ![Bookmarked Jobs Screen](MobileAppScreenShots/BookmarkedPage.jpg)
 
 ### Screen 3: Job Detail Screen
 
-- **Description**: Shows detailed information about a specific job.
+- **Description**: Get comprehensive information about specific positions.
 
   ![Job Detail Screen](MobileAppScreenShots/ViewDetailsPage.jpg)
 
-## Video Presentation
 
-You can watch live application here: [Job Search Application](https://drive.google.com/file/d/1drBh6hSyXt3T7SH5232pMuOGaSqg8n_Y/view?usp=sharing)
+## Technical Requirements
 
+- Bottom navigation bar
+- API integration with pagination
+- Local storage implementation
+- Error handling
+- Loading states
+- Offline capability
 
-## Components
+## Development Notes
 
-### `api/api.js`
+### Setup
+1. Install dependencies
+2. Configure environment
+3. Run development server
 
-Handles API calls for fetching job listings. Replace with actual API endpoints as needed.
-
-### `screens/JobsScreen.js`
-
-Displays a list of job postings. Allows users to bookmark jobs and view job details.
-
-### `screens/BookmarksScreen.js`
-
-Displays a list of bookmarked jobs. Fetches bookmarked jobs from local storage and displays them.
-
-### `screens/JobDetailScreen.js`
-
-Shows detailed information about a specific job. Accessible from the `JobsScreen`.
-
-### `components/BookmarkManager.js`
-
-Provides functions to save, remove, and retrieve bookmarks using `AsyncStorage`.
-
-### `components/AppNavigator.js`
-
-Sets up navigation between screens using `@react-navigation/native` and `@react-navigation/native-stack`.
-
-## Functional Requirements
-
-- **Bottom Navigation**: Users are presented with a bottom navigation UI with “Jobs” and “Bookmarks” as sections.
-- **Jobs Screen**: Fetches data from an API with infinite scroll. Displays job title, location, salary, and phone number.
-- **Job Details**: Clicking on a job card navigates to a screen showing more details about the job.
-- **Bookmark Jobs**: Users can bookmark jobs, and these will appear in the “Bookmarks” tab.
-- **Offline Storage**: All bookmarked jobs are stored locally for offline viewing.
-- **State Management**: Handles appropriate states for loading, errors, and empty states throughout the app.
-
-## Troubleshooting
-
-- **Module Not Found Errors**: Ensure all dependencies are installed and properly linked.
-- **Bookmark Not Showing**: Verify that bookmarks are being saved and retrieved correctly. Ensure local storage is functioning.
+### Common Issues
+- Verify dependency installation
+- Check storage permissions
+- Ensure proper API connectivity
 
 ---
 
